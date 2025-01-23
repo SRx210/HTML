@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <title>Checkbox Validation</title>
+    <script>
+        function validateForm() {
+            var checkboxes = document.getElementsByName('checkboxGroup');
+            var isChecked = false;
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    isChecked = true;
+                    break;
+                }
+            }
+
+            if (!isChecked) {
+                alert("Please select at least one checkbox.");
+                return false;
+            }
+            else {
+                alert("You selected the following options:\n");
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].checked) {
+                        alert(checkboxes[i].value + "\n");
+                    }
+                }
+                return true;
+            }
+        }
+    </script>
+
+    <body>
+        <h2>Checkbox Validation</h2>
+
+        <form onsubmit="return validateForm()">
+			<label> Choose your subject </label>
+            <br><label><input type="checkbox" name="checkboxGroup" value="Mathematics"> Mathematics</label><br>
+            <label><input type="checkbox" name="checkboxGroup" value="Physics"> Physics</label><br>
+            <label><input type="checkbox" name="checkboxGroup" value="Chemistry"> Chemistry</label><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>

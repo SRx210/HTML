@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <title>Dropdown Validation</title>
+    <script>
+        function validateForm() {
+            var dropdown = document.getElementById('dropdown');
+            var selectedValue = dropdown.value;
+
+            if (selectedValue == "") {
+                alert("Please select an option from the dropdown.");
+                return false;
+            }
+            else {
+                document.write("You selected: " + selectedValue);
+                return true;
+            }
+        }
+    </script>
+
+    <body>
+        <h2>Dropdown Menu Validation</h2>
+
+        <form onsubmit="return validateForm()">
+            <label for="dropdown">Choose Sports</label>
+            <select id="dropdown" name="dropdown">
+                <option value="">--Select--</option>
+                <option value="Footbal">Football</option>
+                <option value="Baksetball">Basketball</option>
+                <option value="Cricket">Cricket</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>

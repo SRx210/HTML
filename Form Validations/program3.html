@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <title>Radio Button Validation</title>
+    <script>
+        function validateForm() {
+            var radio1 = document.getElementById('radio1');
+            var radio2 = document.getElementsByName('radioGroup');
+            var isSelected = false;
+            var selectedValue = "";
+
+            if (radio1.checked) {
+                isSelected = true;
+                selectedValue = radio1.value;
+            }
+
+            for (var i = 0; i < radio2.length; i++) {
+                if (radio2[i].checked) {
+                    isSelected = true;
+                    selectedValue = radio2[i].value;
+                }
+            }
+
+            if (!isSelected) {
+                alert("Please select a radio button.");
+                return false;
+            }
+            else {
+                document.write("You selected: " + selectedValue);
+                return true;
+            }
+        }
+    </script>
+
+    <body>
+        <h2>Radio Button Validation</h2>
+
+        <form onsubmit="return validateForm()">
+			<label> Choose a car </label>
+            <br><label><input type="radio" id="radio1" name="radioGroup" value="Bentley"> Bentley</label><br>
+            <label><input type="radio" name="radioGroup" value="Cadillac"> Cadillac</label><br>
+            <label><input type="radio" name="radioGroup" value="Mercedes"> Mercedes</label><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>

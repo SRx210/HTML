@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <title>Textbox Validation</title>
+    <script type="text/javascript">
+        function validateForm() {
+            var name = document.getElementById('name').value;
+
+            if (name == "") {
+                alert("Name must be filled out!");
+                return false;
+            }
+			else {
+				alert("Entered Name =  " + name);
+				return true;
+			}
+        }
+    </script>
+
+    <body>
+        <h2>Form Validation Example</h2>
+
+        <form onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>

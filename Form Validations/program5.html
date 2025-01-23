@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <title>getElementsByClassName() Example</title>
+    <script>
+        function validateForm() {
+            var elements = document.getElementsByClassName('validate');
+            var isValid = true;
+
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].value == "") {
+                    alert("Please fill out all fields.");
+                    isValid = false;
+                    break;
+                }
+            }
+
+            if (isValid) {
+                document.write("All fields are filled out.");
+            }
+
+            return isValid;
+        }
+    </script>
+
+    <body>
+        <h2>Using getElementsByClassName()</h2>
+
+        <form onsubmit="return validateForm()">
+            <label>Name:</label>
+            <input type="text" class="validate"><br><br>
+
+            <label>Email:</label>
+            <input type="email" class="validate"><br><br>
+
+            <label>Phone:</label>
+            <input type="text" class="validate"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

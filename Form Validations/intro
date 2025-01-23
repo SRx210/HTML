@@ -1,1 +1,49 @@
+This Form Validations are used to validate various form controls
+such as textboxes, checkboxes etc.
 
+Following are some questions related to the same
+1. WAJS to validate textboxes using  getElementById(). 
+
+2. WAJS to validate dropdown menu using  getElementById(). 
+
+3. WAJS to validate radio buttons using both the methods. 
+i. getElementById()  
+ii. getElementsByName() 
+
+
+
+4. WAJS to validate checkboxes using getElementsByName(). 
+
+5. WAJS to demonstrate getElementsByClassName() method. 
+
+6. WAJS to demonstrate getElementsByTagName() method. 
+
+7. WAJS to validate phone number.  
+10-digit phone number. 
+Number should start with either 7, 8 or 9. 
+
+8. WAJS to validate username entered by user. Username should start with COMP followed by any 2 digits. 
+
+9. WAJS to validate password. - - - - - 
+Size of password should be between 6 to 10 
+At least one lowercase alphabet 
+At least one uppercase alphabet 
+At least one digit 
+At least one special symbol 
+
+10. WAJS to validate email. 
+
+11. WAJS to design one sign up form having following input elements. 
+a. Textboxes 
+b. Dropdown menu 
+c. Radio buttons 
+d. Checkboxes 
+e. Username 
+f. Password 
+g. Phone number 
+h. Email 
+Display the entered data if validations are successful. 
+
+12. WAJS to implement the following. 
+When a button is clicked, all the <p> elements font size should increase to 30px and their background 
+color should change to orange color.
